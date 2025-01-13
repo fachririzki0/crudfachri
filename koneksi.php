@@ -1,8 +1,11 @@
 <?php
-$koneksi=mysqli_connect("localhost","root","","belajarcrud");
+$server     ="localhost";
+$user_db    ="root";
+$pass_db    ="";
+$db_name    ="tokoprabotanfachri12";
 
-if(mysqli_connect()){
-    echo"Koneksi Gagal:".mysqli_connect_error();
-}else{
-    echo"Koneksi Berhasil";
+$koneksi=mysqli_connect($server,$user_db,$pass_db,$db_name);
+
+if(mysqli_connect_error()){
+    echo"Koneksi Gagal :".mysqli_connect_error();
 }
